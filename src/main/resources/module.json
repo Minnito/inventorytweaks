@@ -1,0 +1,33 @@
+{
+  "name": "Inventar",
+  "developer": "Minnito",
+  "version": "1.0.0",
+  "minecraft": "26.3",
+  "api": "6.2.1",
+  "main": "inventar.Inventar",
+  "category": "utility",
+  "permissions": ["input"],
+  "description": "Sortiert Inventar und Behälter per Mittelklick: fasst halbe Stapel zusammen und ordnet nach Typ, Name oder Seltenheit, Hotbar bleibt unberührt. Shift + Linksklick ziehen verschiebt Gegenstände sofort. Hotbar-Slots lassen sich gegen Wegwerfen, Löschen und Verschieben sperren. Warnt mit Text und Ton, wenn das Werkzeug in der Hand fast kaputt ist. Server können das Sortieren über die Funktion „inventory“ abschalten.",
+  "hooks": "inventar/Hooks",
+  "patches": [
+    {
+      "cls": "net/minecraft/client/multiplayer/MultiPlayerGameMode",
+      "method": "handleContainerInput",
+      "hook": "klick",
+      "replace": true
+    },
+    {
+      "cls": "net/minecraft/client/multiplayer/MultiPlayerGameMode",
+      "method": "dropItem",
+      "hook": "wegwerfen",
+      "replace": true
+    },
+    {
+      "cls": "net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen",
+      "method": "slotClicked",
+      "desc": "(Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ContainerInput;)V",
+      "hook": "kreativKlick",
+      "replace": true
+    }
+  ]
+}
