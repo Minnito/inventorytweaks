@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Addon** | Inventory Tweaks (ID `inventorytweaks`, formerly `inventar`) |
+| **Addon** | Inventory Tweaks (ID `inventorytweaks`) |
 | **Version** | 1.1.0 |
 | **Developer** | Minnito / Claude |
 | **Platform** | Client addon for the MC Launcher, API 6.2.1, Minecraft 26.3 |
