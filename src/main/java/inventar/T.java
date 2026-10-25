@@ -4,7 +4,7 @@ import java.util.Locale;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;
 
-// Texte in der Sprache des Spiels: assets/inventar/lang/<sprache>.json (de_de, en_us; andere Sprachen fallen auf Englisch zurück).
+// Texte in der Sprache des Spiels: assets/inventorytweaks/lang/<sprache>.json (de_de, en_us; andere Sprachen fallen auf Englisch zurück).
 // Immer beim Anzeigen holen, nicht in Feldern merken – so wirkt ein Sprachwechsel sofort.
 final class T {
     static String t(String key, Object... args) {

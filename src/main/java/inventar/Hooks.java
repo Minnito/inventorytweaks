@@ -51,7 +51,7 @@ public final class Hooks {
 
     private static boolean aus(Exception e) {
         kaputt = true;
-        System.err.println("[inventar] Hotbar-Sperre abgeschaltet: " + e);
+        System.err.println("[inventorytweaks] Hotbar-Sperre abgeschaltet: " + e);
         return false;
     }
 }

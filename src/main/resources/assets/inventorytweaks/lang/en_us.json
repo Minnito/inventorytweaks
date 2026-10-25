@@ -1,0 +1,38 @@
+{
+  "key.category.inventorytweaks.keys": "Inventory Tweaks",
+  "key.inventorytweaks.sort": "Sort inventory",
+
+  "inventorytweaks.name": "Inventory Tweaks",
+  "inventorytweaks.server.gesperrt": "This server does not allow automatic inventory clicks – sorting is off.",
+  "inventorytweaks.cursor_voll": "No free slot for the item on your cursor – not sorted.",
+  "inventorytweaks.warnung": "Low durability: %s %%",
+
+  "inventorytweaks.oeffnen": "Open",
+  "inventorytweaks.seite.sortieren": "Sorting",
+  "inventorytweaks.seite.sortieren.info": "Sort order, key and quick move",
+  "inventorytweaks.seite.warnung": "Durability warning",
+  "inventorytweaks.seite.warnung.info": "Warning and sound when a tool is about to break",
+
+  "inventorytweaks.o.sortieren": "Sorting enabled",
+  "inventorytweaks.o.sortieren.info": "The sort key orders the open inventory or container. The hotbar stays as it is.",
+  "inventorytweaks.o.art": "Sort by",
+  "inventorytweaks.o.art.info": "Order of the items; equal items are first combined into full stacks.",
+  "inventorytweaks.art.typ": "Type",
+  "inventorytweaks.art.name": "Name",
+  "inventorytweaks.art.seltenheit": "Rarity",
+  "inventorytweaks.o.ziehen": "Quick move",
+  "inventorytweaks.o.ziehen.info": "Hold Shift + left mouse button and drag over slots: every item moves instantly between inventory and container.",
+  "inventorytweaks.seite.sperre": "Hotbar lock",
+  "inventorytweaks.seite.sperre.info": "Lock hotbar slots against dropping, deleting and moving",
+  "inventorytweaks.o.gesperrt": "Locked hotbar slots",
+  "inventorytweaks.o.gesperrt.info": "Items in these slots cannot be dropped, deleted or moved – not even in the creative inventory. They still drop on death.",
+  "inventorytweaks.slot": "Slot %s",
+  "inventorytweaks.o.warnung": "Warning enabled",
+  "inventorytweaks.o.warnung.info": "Shows a warning above the hotbar when the tool in your hand is about to break.",
+  "inventorytweaks.o.schwelle": "Warn below",
+  "inventorytweaks.o.schwelle.info": "Remaining durability at which the warning starts.",
+  "inventorytweaks.o.ton": "Warning sound",
+  "inventorytweaks.o.ton.info": "Plays a sound once when a tool drops below the threshold.",
+  "inventorytweaks.o.lautstaerke": "Volume",
+  "inventorytweaks.o.lautstaerke.info": "Volume of the warning sound."
+}

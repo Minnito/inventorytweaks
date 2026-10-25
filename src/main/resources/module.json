@@ -1,7 +1,7 @@
 {
-  "name": "Inventar",
+  "name": "Inventory Tweaks",
   "developer": "Minnito",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minecraft": "26.3",
   "api": "6.2.1",
   "main": "inventar.Inventar",

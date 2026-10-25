@@ -65,7 +65,7 @@ import net.minecraft.world.item.Items;
 // Sortiert wird, was gerade offen ist: in Kiste, Fass, Shulkerkiste, Spender, Trichter der Behälter, sonst das eigene
 // Inventar über der Hotbar. Hotbar, Rüstung und Nebenhand bleiben immer, wo sie sind. Keine Patches nötig.
 public final class Inventar implements Module {
-    static final String ID = "inventar";
+    static final String ID = "inventorytweaks";
     private static final String WARNTON = "minecraft:entity.iron_golem.repair";
 
     private final AddonConfig cfg = AddonConfig.of(ID);
@@ -232,7 +232,7 @@ public final class Inventar implements Module {
             m.setAccessible(true);
             return m;
         } catch (ReflectiveOperationException | RuntimeException e) {
-            System.err.println("[inventar] slotClicked nicht gefunden, Ziehen nur über Menü-Klicks: " + e);
+            System.err.println("[inventorytweaks] slotClicked nicht gefunden, Ziehen nur über Menü-Klicks: " + e);
             return null;
         }
     }
@@ -252,7 +252,7 @@ public final class Inventar implements Module {
             f.setAccessible(true);
             return f;
         } catch (ReflectiveOperationException | RuntimeException e) {
-            System.err.println("[inventar] " + klasse + "." + name + " nicht gefunden: " + e);
+            System.err.println("[inventorytweaks] " + klasse + "." + name + " nicht gefunden: " + e);
             return null;
         }
     }
@@ -263,7 +263,7 @@ public final class Inventar implements Module {
             f.setAccessible(true);
             return f;
         } catch (ReflectiveOperationException | RuntimeException e) {
-            System.err.println("[inventar] Schnell verschieben aus: " + e);
+            System.err.println("[inventorytweaks] Schnell verschieben aus: " + e);
             return null;
         }
     }
@@ -539,12 +539,12 @@ public final class Inventar implements Module {
             bestaetigt("Sperre: Fackel bleibt (Ziehen, Shift-Klick, Q, Ziffertaste, Aufnehmen, Q im Spiel)",
                 () -> ist(inv, 36, Items.TORCH, 5) && ist(inv, 9, Items.DIRT, 2) && inv.getCarried().isEmpty(), () -> {
                 Testing.check(rotAuswaehlen(inv.getSlot(36).getItem()) && !rotAuswaehlen(inv.getSlot(9).getItem()), "Roter Auswahlrahmen für gesperrten Gegenstand in der Hand");
-                // Bildschirmfoto der Hotbar mit rotem Rahmen zum Ansehen: client-modules/inventar/rahmen-test.png
+                // Bildschirmfoto der Hotbar mit rotem Rahmen zum Ansehen: client-modules/inventorytweaks/rahmen-test.png
                 Screenshots.capture(bild -> {
                     try (bild) {
                         Files.write(AddonConfig.dir(ID).resolve("rahmen-test.png"), Screenshots.png(bild));
                     } catch (IOException e) {
-                        System.err.println("[inventar] Testbild: " + e);
+                        System.err.println("[inventorytweaks] Testbild: " + e);
                     }
                 });
                 Testing.command("gamemode creative");

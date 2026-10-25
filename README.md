@@ -1,16 +1,16 @@
-# Developer Log: Inventar
+# Developer Log: Inventory Tweaks
 
 | | |
 |---|---|
-| **Addon** | Inventar (ID `inventar`) |
-| **Version** | 1.0.0 |
+| **Addon** | Inventory Tweaks (ID `inventorytweaks`, formerly `inventar`) |
+| **Version** | 1.1.0 |
 | **Developer** | Minnito / Claude |
 | **Platform** | Client addon for the MC Launcher, API 6.2.1, Minecraft 26.3 |
 | **Language / build** | Java 25 (`--release 25`), Gradle 9.4.1 (wrapper) |
 | **Status** | 2026-10-25 |
-| **Build** | `build/libs/inventar.jar`, 32,226 bytes, SHA-256 `1a7f5e62810d24851169603df5f43fd2d1c6f3a5549d3fc00cd22ac08a5e7225` |
-| **Self-test** | `gradlew runTest`: 39 of 39 checks passed (2026-10-25, 23:01) |
-| **Download** | [Release v1.0.0](https://github.com/Minnito/inventar/releases/tag/v1.0.0) |
+| **Build** | `build/libs/inventorytweaks.jar`, 32,340 bytes, SHA-256 `f71924a7669b639bbc7fdb77582f67381bd33001e3333d2c29d925a7f62a27b3` |
+| **Self-test** | `gradlew runTest`: 39 of 39 checks passed (2026-10-25, 23:58) |
+| **Download** | [Release v1.1.0](https://github.com/Minnito/inventorytweaks/releases/tag/v1.1.0) |
 | **Patch check** | not run yet: `gradlew check` needs the addon server (`localhost:8787`). All 3 patches were applied in the game without errors |
 
 ---
@@ -58,7 +58,7 @@ Inventory helpers that run directly in the launcher's client, without Fabric or 
 | `Inventar` | 600 | Entry point (`client.api.Module`): keys and mouse, what to sort, quick move, hotbar lock state and red frame, durability warning, settings, self-test |
 | `Sortierer` | 128 | Target layout (merge + sort, testable without a menu), sorting via real inventory clicks, creative path |
 | `Hooks` | 57 | Patch hooks for the hotbar lock |
-| `T` | 19 | Translations from `assets/inventar/lang/` |
+| `T` | 19 | Translations from `assets/inventorytweaks/lang/` |
 
 **Sorting:** clear the cursor → fill partial stacks (pick up stack b, put it on a, put the rest back) → swap into the target order. After merging there is at most one partial stack per item, so pick up – place – put back is a clean swap even for equal items (starting from the fuller stack).
 
@@ -76,7 +76,7 @@ The hovered slot (`AbstractContainerScreen.hoveredSlot`), the screen's `slotClic
 
 | What | Where |
 |---|---|
-| Settings and locked slots | `client-modules/inventar.properties` (client API `AddonConfig`) |
+| Settings and locked slots | `client-modules/inventorytweaks.properties` (client API `AddonConfig`) |
 | Key binding | `client-modules/keys.properties` (client) |
 
 ## 4. History
@@ -89,6 +89,7 @@ All work happened on 2026-10-25.
 4. **Hotbar lock** with three patches, quick move enabled in all creative tabs.
 5. **Red selection frame** for a locked item in hand (replaced a lock icon).
 6. **Settings on short sub-pages.**
+7. **Renamed to Inventory Tweaks (version 1.1.0).** New ID `inventorytweaks`: jar, config file, key binding and translations use the new name. Settings saved under the old ID `inventar` are not taken over.
 
 ## 5. Tests
 
@@ -128,21 +129,21 @@ The GitHub Action (`.github/workflows/build.yml`) only builds the jar on every p
 - **Double click to collect** with an item on the cursor can still take matching items out of a locked slot.
 - **The red frame shows only in the game**, not while a menu is open, and only when the locked slot holds an item.
 - **A saved key binding wins** over the default. Anyone who bound the sort key earlier keeps that binding.
-- **Patches need a restart.** `.addon reload inventar` is not enough.
+- **Patches need a restart.** `.addon reload inventorytweaks` is not enough.
 
 ## 7. Building and running
 
 Requirement: JDK 25 or newer. The first build downloads Minecraft and its libraries once into `~/.gradle/caches/client-mc`.
 
 ```bash
-./gradlew build        # → build/libs/inventar.jar, also checks the patches (needs the addon server)
+./gradlew build        # → build/libs/inventorytweaks.jar, also checks the patches (needs the addon server)
 ./gradlew jar          # jar only, without the patch check
 ./gradlew runClient    # game with the addon, offline as "Dev", folder run/
 ./gradlew runTest      # test server + game, self-test
 ./gradlew install      # copy jar into the game; patches need a restart
 ```
 
-Start `runClient` only after the previous game has closed: a running game keeps its jar, and the new one would only be placed next to it as `inventar.jar.update`.
+Start `runClient` only after the previous game has closed: a running game keeps its jar, and the new one would only be placed next to it as `inventorytweaks.jar.update`.
 
 ## 8. Controls
 

@@ -1,0 +1,38 @@
+{
+  "key.category.inventorytweaks.keys": "Inventory Tweaks",
+  "key.inventorytweaks.sort": "Inventar sortieren",
+
+  "inventorytweaks.name": "Inventory Tweaks",
+  "inventorytweaks.server.gesperrt": "Dieser Server erlaubt keine automatischen Inventar-Klicks – Sortieren ist aus.",
+  "inventorytweaks.cursor_voll": "Kein freier Platz für den Gegenstand am Mauszeiger – nicht sortiert.",
+  "inventorytweaks.warnung": "Geringe Haltbarkeit: %s %%",
+
+  "inventorytweaks.oeffnen": "Öffnen",
+  "inventorytweaks.seite.sortieren": "Sortieren",
+  "inventorytweaks.seite.sortieren.info": "Sortierart, Taste und schnelles Verschieben",
+  "inventorytweaks.seite.warnung": "Haltbarkeitswarnung",
+  "inventorytweaks.seite.warnung.info": "Warnung und Ton bei fast kaputtem Werkzeug",
+
+  "inventorytweaks.o.sortieren": "Sortieren aktiv",
+  "inventorytweaks.o.sortieren.info": "Die Sortier-Taste ordnet das offene Inventar oder den offenen Behälter. Die Hotbar bleibt, wie sie ist.",
+  "inventorytweaks.o.art": "Sortieren nach",
+  "inventorytweaks.o.art.info": "Reihenfolge der Gegenstände; gleiche Gegenstände werden vorher zu vollen Stapeln zusammengefasst.",
+  "inventorytweaks.art.typ": "Typ",
+  "inventorytweaks.art.name": "Name",
+  "inventorytweaks.art.seltenheit": "Seltenheit",
+  "inventorytweaks.o.ziehen": "Schnell verschieben",
+  "inventorytweaks.o.ziehen.info": "Shift + Linksklick gedrückt halten und über Slots ziehen: jeder Gegenstand wandert sofort zwischen Inventar und Behälter.",
+  "inventorytweaks.seite.sperre": "Hotbar-Sperre",
+  "inventorytweaks.seite.sperre.info": "Hotbar-Slots gegen Wegwerfen, Löschen und Verschieben sperren",
+  "inventorytweaks.o.gesperrt": "Gesperrte Hotbar-Slots",
+  "inventorytweaks.o.gesperrt.info": "Gegenstände in diesen Slots lassen sich nicht wegwerfen, löschen oder verschieben – auch nicht im Kreativ-Inventar. Beim Tod fallen sie trotzdem heraus.",
+  "inventorytweaks.slot": "Slot %s",
+  "inventorytweaks.o.warnung": "Warnung aktiv",
+  "inventorytweaks.o.warnung.info": "Zeigt über der Hotbar eine Warnung, wenn das Werkzeug in der Hand fast kaputt ist.",
+  "inventorytweaks.o.schwelle": "Warnen unter",
+  "inventorytweaks.o.schwelle.info": "Rest-Haltbarkeit, ab der gewarnt wird.",
+  "inventorytweaks.o.ton": "Warnton",
+  "inventorytweaks.o.ton.info": "Spielt einmal einen Ton, wenn ein Werkzeug unter die Schwelle fällt.",
+  "inventorytweaks.o.lautstaerke": "Lautstärke",
+  "inventorytweaks.o.lautstaerke.info": "Lautstärke des Warntons."
+}
