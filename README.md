@@ -10,7 +10,7 @@
 | **Status** | 2026-10-26 |
 | **Build** | `build/libs/inventorytweaks.jar`, 32,343 bytes, SHA-256 `430139d7c03345fc8b8759ba390076e5a8e948f26f3f314bdd466e3e946891ce` |
 | **Self-test** | `gradlew runTest`: 39 of 39 checks passed (2026-10-26, 12:09, client 7.1.03) |
-| **Download** | v1.2.0 not released yet. [Release v1.1.0](https://github.com/Minnito/inventorytweaks/releases/tag/v1.1.0) is built for API 6.2.1 and no longer loads on clients from 7.1.03 on |
+| **Download** | [Release v1.2.0](https://github.com/Minnito/inventorytweaks/releases/tag/v1.2.0) (API 7.1.03). Older releases up to v1.1.0 are built for API 6.2.1 and no longer load on clients from 7.1.03 on |
 | **Patch check** | `gradlew check`: 3 of 3 patches OK against Minecraft 26.3 (2026-10-26); in the game 3/3 applied |
 
 ---
